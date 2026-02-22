@@ -139,6 +139,22 @@ The federated gradient accumulation claimed as a "network-effect moat" in [`prag
 
 ---
 
+## Open Data Sources (February 2026)
+
+See [`open_data_sources.md`](open_data_sources.md) for the full catalog.
+
+Publicly available datasets relevant to AITYA's analytics fall into three tiers of direct utility:
+
+- **Prototype-ready (immediate):** Kaggle invoice datasets (IBM Late Payment Histories, Payment Date Prediction) for ML pipeline prototyping; ECB and Bank of Greece APIs for Greek macro features; SEC EDGAR bulk downloads for large-scale DSO/CCC pre-training.
+- **Greek-specific enrichment (medium effort):** Diavgeia (Greek government payment decisions since 2010, CC-BY, API available) is uniquely valuable for counterparty risk -- it reveals which customers are government suppliers and actual government payment timelines. ATHEX ESEF filings provide Greek listed company financials in machine-readable iXBRL. TED (EU public procurement) identifies companies with government contracts.
+- **Benchmarking calibration:** EU Payment Observatory, Intrum European Payment Report, and Atradius Payment Practices Barometer provide country-level and sector-level payment behavior statistics for Greece and Europe. Hackett Working Capital Survey provides DSO/CCC industry benchmarks. These are PDF reports, not APIs.
+
+**Critical gap:** No public dataset provides multi-company, multi-tenant invoice-level payment data with counterparty identifiers. This is precisely the data AITYA's federated architecture would generate -- reinforcing both the moat thesis and the cold-start problem.
+
+**Notable non-options:** PSD2/Open Banking data is per-consent only (no bulk datasets exist); ECB AnaCredit (loan-by-loan euro area credit data) is restricted to central banks; ICAP CRIF has the best Greek credit data (8.7M companies) but is commercial and a potential competitor; GEMI full API access is restricted to public bodies.
+
+---
+
 ## Strategic Path Forward
 
 1. **Launch with Cash & Collections Intelligence** -- the two-pillar MVP with dual ROI (collection efficiency + working-capital visibility).
