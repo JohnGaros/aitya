@@ -124,6 +124,21 @@ SAP's November 2025 Snowflake partnership, the Databricks BDC Connect GA, and pl
 
 ---
 
+## Network Effects Beyond Federated Learning (February 2026)
+
+See [`network_effects.md`](network_effects.md) for the full analysis.
+
+The federated gradient accumulation claimed as a "network-effect moat" in [`pragmatic.md`](pragmatic.md) is more accurately a data scale advantage (linear, asymptotic) than a genuine network effect (non-linear, increasing returns). Four alternative network effect strategies were evaluated:
+
+- **Cross-tenant benchmarking:** Genuine same-side network effect but weak -- asymptotes at 30-50 participants, easily replicated, and requires industry-homogeneous cohorts that the Greek market cannot provide at launch (3 RISE customers across 3 different industries).
+- **Cross-entity counterparty graph:** The strongest genuine network effect available -- non-asymptotic, defensible at scale, central to the value proposition. But requires geographic/industry density that a startup cannot engineer quickly, and competes against established credit intelligence providers (Dun & Bradstreet, Coface) who already own this graph at global scale.
+- **Two-sided marketplace (analytics modules):** Not viable at sub-100-tenant scale. Requires user density that vertical B2B analytics products rarely achieve.
+- **Community/expertise effects:** Not viable at launch scale. Requires hundreds of active users and years of investment to reach critical mass.
+
+**No network effect strategy is viable at AITYA's launch scale.** The first 10-20 customers will buy on product quality and domain expertise, not network effects. Recommended sequencing: launch with benchmarking (sales tool, not a moat), architect toward the counterparty graph (durable moat, requires 50-100+ tenants), defer marketplace and community strategies.
+
+---
+
 ## Strategic Path Forward
 
 1. **Launch with Cash & Collections Intelligence** -- the two-pillar MVP with dual ROI (collection efficiency + working-capital visibility).
